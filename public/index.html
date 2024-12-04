@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What To Eat?</title>
+
+    <link href="style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+<audio id="audio" autoplay loop>
+    <source src="https://cdn.glitch.global/bbda0873-7c58-4fe1-a84e-03bbc1db1b05/just-relax-11157.mp3?v=1" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+<div class="music-controls">
+    <img id="music" src="./images/music.png" class="music" />
+    <img id="myFavorite" src="./images/favorites.png" class="music" />
+</div>
+<div class="container">
+    <div id="left" class="left">
+        <div id="item-1">
+            "What's on the Plate Today?"
+        </div>
+        <div id="item-2">What To Eat?</div>
+        <div id="item-3">
+            "What's on the Plate Today?" helps you find quick, delicious meals that fit your cravings,
+            time, and dietary needs. Just click below for a personalized dish suggestion!
+        </div>
+        <div class="food-type">
+            <button id="comfort_food" class="btn active">Comfort food</button>
+            <button id="quick_meal" class="btn">Quick meal</button>
+            <button id="adventure_cuisine" class="btn">Adventure cuisine</button>
+        </div>
+        <div class="scroll-container">
+            <div class="scroll-item">
+                <div class="scroll-num">
+                    <ul id="dish1"></ul>
+                </div>
+                <div class="heart-img-wrapper">
+                    <img class="heart-img" src="./images/heart.png" />
+                </div>
+            </div>
+            <div class="scroll-item">
+                <div class="scroll-num scroll-num2">
+                    <ul id="dish2"></ul>
+                </div>
+                <div class="heart-img-wrapper">
+                    <img class="heart-img" src="./images/heart.png" />
+                </div>
+            </div>
+            <div class="scroll-item">
+                <div class="scroll-num scroll-num3">
+                    <ul id="dish3"></ul>
+                </div>
+                <div class="heart-img-wrapper">
+                    <img class="heart-img" src="./images/heart.png" />
+                </div>
+            </div>
+        </div>
+        <div>
+            <button id="start" class="btn">Start</button>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="chatWrapper">
+            <div id="chatList"></div>
+            <div class="chat-input-wrapper">
+                <input id="message" placeholder="Message..." />
+                <button id="send">Send</button>
+                <button id="upload">
+                    <img class="message-image" src="./images/image.png" />
+                </button>
+                <input id="upload_file" type="file" style="display: none">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>My Favorites</h2>
+        <div class="favorite-list" id="favorite_list"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script src="app.js"></script>
+</body>
+
+</html>
